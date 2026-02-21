@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUTRIGAZE - Smart Sorting System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="/" class="navbar-brand">
+                <span>🍎</span>
+                <span>NUTRIGAZE</span>
+            </a>
+            <ul class="navbar-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/test">Test Model</a></li>
+                <li><a href="/inspect">Model Info</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="card">
+            <div class="hero">
+                <div class="hero-icon">🍎🍌🍅</div>
+                <h1>NUTRIGAZE</h1>
+                <p class="tagline">Smart Sorting: Transfer Learning for Identifying Rotten Fruits and Vegetables</p>
+                <p class="description">
+                    Advanced AI-powered system using deep learning and transfer learning techniques 
+                    to automatically classify fruits and vegetables as healthy or rotten. 
+                    Helping reduce food waste and improve quality control.
+                </p>
+                <div style="margin-top: 2rem;">
+                    <a href="/test" class="btn btn-primary">🚀 Start Testing</a>
+                    <a href="/inspect" class="btn btn-secondary">🔍 Model Information</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="card">
+            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 2rem;">Key Features</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Powered</h3>
+                    <p>Uses advanced transfer learning with pre-trained CNN models for accurate classification</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Detection</h3>
+                    <p>Real-time analysis with results in seconds</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>High Accuracy</h3>
+                    <p>92%+ accuracy in distinguishing healthy from rotten produce</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Reduce Waste</h3>
+                    <p>Help minimize food waste through early detection</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Supported Items -->
+        <div class="card">
+            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 2rem;">Supported Items</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">🍎</div>
+                    <div class="stat-label">Apples</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">🍌</div>
+                    <div class="stat-label">Bananas</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">🍅</div>
+                    <div class="stat-label">Tomatoes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">🥔</div>
+                    <div class="stat-label">Potatoes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">🍓</div>
+                    <div class="stat-label">Strawberries</div>
+                </div>
+            </div>
+            <p style="text-align: center; color: var(--text-light); margin-top: 1rem;">
+                Each item is classified as either <strong style="color: var(--success-color);">Healthy</strong> 
+                or <strong style="color: var(--danger-color);">Rotten</strong>
+            </p>
+        </div>
+
+        <!-- How It Works -->
+        <div class="card">
+            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 2rem;">How It Works</h2>
+            <div class="info-grid">
+                <div class="info-box">
+                    <h3>1. Upload Image</h3>
+                    <p>Upload a clear image of your fruit or vegetable</p>
+                </div>
+                <div class="info-box">
+                    <h3>2. AI Analysis</h3>
+                    <p>Our model analyzes the image using deep learning</p>
+                </div>
+                <div class="info-box">
+                    <h3>3. Get Results</h3>
+                    <p>Receive instant classification and confidence score</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2026 NUTRIGAZE - Smart Sorting System | Powered by Transfer Learning</p>
+    </div>
+</body>
+</html>

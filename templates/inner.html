@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Model - NUTRIGAZE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="/" class="navbar-brand">
+                <span>🍎</span>
+                <span>NUTRIGAZE</span>
+            </a>
+            <ul class="navbar-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/test">Test Model</a></li>
+                <li><a href="/inspect">Model Info</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="card">
+            <h1 style="text-align: center; color: var(--primary-color);">🧪 Test Smart Sorting Model</h1>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 2rem;">
+                Upload an image of a fruit or vegetable to classify it as healthy or rotten
+            </p>
+
+            <!-- Upload Section -->
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📤</div>
+                    <h3>Drop image here or click to upload</h3>
+                    <p style="color: var(--text-light); margin: 1rem 0;">Supports: JPG, PNG, WEBP</p>
+                    <input type="file" id="imageInput" accept="image/*">
+                    <label for="imageInput" class="file-label">Choose File</label>
+                    <p id="fileName" style="margin-top: 1rem; color: var(--text-dark);"></p>
+                </div>
+            </div>
+
+            <!-- Preview Section -->
+            <div class="preview-section" id="previewSection">
+                <h3 style="text-align: center; color: var(--primary-color);">Image Preview</h3>
+                <div class="image-preview">
+                    <img id="imagePreview" src="" alt="Preview">
+                </div>
+                <div style="text-align: center; margin-top: 1.5rem;">
+                    <button class="btn btn-success" onclick="predict()">🔮 Analyze Image</button>
+                    <button class="btn btn-secondary" onclick="resetUpload()">🔄 Upload New Image</button>
+                </div>
+            </div>
+
+            <!-- Result Section -->
+            <div class="result-section" id="resultSection">
+                <div class="result-card" id="resultCard">
+                    <div class="result-icon" id="resultIcon">✨</div>
+                    <h2>Prediction Result</h2>
+                    <div class="prediction-result" id="predictionText">--</div>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" id="confidenceFill" style="width: 0%;">
+                            <span id="confidenceText">0%</span>
+                        </div>
+                    </div>
+                    <p id="resultDetails" style="margin-top: 1rem;"></p>
+                    <button class="btn btn-secondary" onclick="resetUpload()" style="margin-top: 1rem;">
+                        Test Another Image
+                    </button>
+                </div>
+            </div>
+
+            <!-- Back Button -->
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="/" class="btn btn-secondary">← Back to Home</a>
+            </div>
+        </div>
+
+        <!-- Tips Section -->
+        <div class="card">
+            <h3 style="text-align: center; color: var(--primary-color); margin-bottom: 1.5rem;">
+                Tips for Best Results
+            </h3>
+            <div class="info-grid">
+                <div class="info-box">
+                    <h3>📸 Clear Images</h3>
+                    <p>Use well-lit, focused images of the produce</p>
+                </div>
+                <div class="info-box">
+                    <h3>🎯 Close-up Shots</h3>
+                    <p>Fill the frame with the fruit/vegetable</p>
+                </div>
+                <div class="info-box">
+                    <h3>🌈 Good Lighting</h3>
+                    <p>Ensure adequate lighting for accurate detection</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="loading"></div>
+            <p style="margin-top: 1rem;">Analyzing image...</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2026 NUTRIGAZE - Smart Sorting System</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

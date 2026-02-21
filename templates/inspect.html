@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Information - NUTRIGAZE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="/" class="navbar-brand">
+                <span>🍎</span>
+                <span>NUTRIGAZE</span>
+            </a>
+            <ul class="navbar-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/test">Test Model</a></li>
+                <li><a href="/inspect">Model Info</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="card">
+            <h1 style="text-align: center; color: var(--primary-color);">🔍 Model Information</h1>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 2rem;">
+                Technical details about our Smart Sorting AI model
+            </p>
+
+            <!-- Architecture Section -->
+            <div class="info-grid">
+                <div class="info-box">
+                    <h3>🏗️ Architecture</h3>
+                    <p>Transfer Learning with Pre-trained CNN Model (VGG16/ResNet50)</p>
+                </div>
+                <div class="info-box">
+                    <h3>🎯 Classes Supported</h3>
+                    <p>10 Classes: Apple, Banana, Tomato, Potato, Strawberry (Healthy & Rotten)</p>
+                </div>
+                <div class="info-box">
+                    <h3>📐 Input Size</h3>
+                    <p>224×224 pixels (RGB images)</p>
+                </div>
+                <div class="info-box">
+                    <h3>🔧 Framework</h3>
+                    <p>TensorFlow/Keras with Flask Backend</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance Metrics -->
+        <div class="card">
+            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 2rem;">
+                📊 Performance Metrics
+            </h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">92%</div>
+                    <div class="stat-label">Training Accuracy</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">89%</div>
+                    <div class="stat-label">Validation Accuracy</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">87%</div>
+                    <div class="stat-label">Test Accuracy</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">&lt;2s</div>
+                    <div class="stat-label">Inference Time</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Details -->
+        <div class="card">
+            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 2rem;">
+                🛠️ Technical Specifications
+            </h2>
+            <div class="info-grid">
+                <div class="info-box">
+                    <h3>Transfer Learning Base</h3>
+                    <p>Pre-trained ImageNet weights for feature extraction with fine-tuned top layers</p>
+                </div>
+                <div class="info-box">
+                    <h3>Data Augmentation</h3>
+                    <p>Rotation, flipping, zooming, and brightness adjustments for robust training</p>
+                </div>
+                <div class="info-box">
+                    <h3>Optimization</h3>
+                    <p>Adam optimizer with learning rate scheduling and early stopping</p>
+                </div>
+                <div class="info-box">
+                    <h3>Loss Function</h3>
+                    <p>Categorical cross-entropy for multi-class classification</p>
+                </div>
+                <div class="info-box">
+                    <h3>Training Dataset</h3>
+                    <p>5,000+ labeled images of fruits and vegetables in various conditions</p>
+                </div>
+                <div class="info-box">
+                    <h3>Deployment</h3>
+                    <p>Flask API with real-time image processing and classification</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Model Architecture Diagram -->
+        <div class="card">
+            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 2rem;">
+                📋 Classification Classes
+            </h2>
+            <div style="background: var(--bg-light); padding: 2rem; border-radius: 12px;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; max-width: 600px; margin: 0 auto;">
+                    <div style="padding: 1rem; background: white; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2rem;">🍎</div>
+                        <strong>Apple</strong>
+                        <div style="font-size: 0.9rem; color: var(--text-light);">Healthy / Rotten</div>
+                    </div>
+                    <div style="padding: 1rem; background: white; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2rem;">🍌</div>
+                        <strong>Banana</strong>
+                        <div style="font-size: 0.9rem; color: var(--text-light);">Healthy / Rotten</div>
+                    </div>
+                    <div style="padding: 1rem; background: white; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2rem;">🍅</div>
+                        <strong>Tomato</strong>
+                        <div style="font-size: 0.9rem; color: var(--text-light);">Healthy / Rotten</div>
+                    </div>
+                    <div style="padding: 1rem; background: white; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 2rem;">🥔</div>
+                        <strong>Potato</strong>
+                        <div style="font-size: 0.9rem; color: var(--text-light);">Healthy / Rotten</div>
+                    </div>
+                    <div style="padding: 1rem; background: white; border-radius: 8px; text-align: center; grid-column: 1 / -1;">
+                        <div style="font-size: 2rem;">🍓</div>
+                        <strong>Strawberry</strong>
+                        <div style="font-size: 0.9rem; color: var(--text-light);">Healthy / Rotten</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Applications -->
+        <div class="card">
+            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 2rem;">
+                🌟 Applications & Use Cases
+            </h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">🏪</div>
+                    <h3>Retail Quality Control</h3>
+                    <p>Automated inspection in supermarkets and grocery stores</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏭</div>
+                    <h3>Food Processing</h3>
+                    <p>Quality assurance in food manufacturing facilities</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Supply Chain</h3>
+                    <p>Inspection during transportation and distribution</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">♻️</div>
+                    <h3>Waste Reduction</h3>
+                    <p>Early detection to minimize food waste</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back Button -->
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="/" class="btn btn-primary">← Back to Home</a>
+            <a href="/test" class="btn btn-success">Test the Model →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2026 NUTRIGAZE - Smart Sorting System</p>
+    </div>
+</body>
+</html>
